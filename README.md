@@ -1,8 +1,6 @@
 # Volto Iframe Block (volto-iframe-block)
 
-A new add-on for Volto
-
-[![npm](https://img.shields.io/npm/v/volto-iframe-block)](https://www.npmjs.com/package/volto-iframe-block)
+[![npm](https://img.shields.io/npm/v/@kitconcept/volto-iframe-block)](https://www.npmjs.com/package/@kitconcept/volto-iframe-block)
 [![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://kitconcept.github.io/volto-iframe-block/)
 [![Code analysis checks](https://github.com/kitconcept/volto-iframe-block/actions/workflows/code.yml/badge.svg)](https://github.com/kitconcept/volto-iframe-block/actions/workflows/code.yml)
 [![Unit tests](https://github.com/kitconcept/volto-iframe-block/actions/workflows/unit.yml/badge.svg)](https://github.com/kitconcept/volto-iframe-block/actions/workflows/unit.yml)
@@ -10,6 +8,7 @@ A new add-on for Volto
 ## Features
 
 <!-- List your awesome features here -->
+The Volto Iframe Block allows editors to embed another website into their Volto page.
 
 ## Installation
 
@@ -26,15 +25,15 @@ yo @plone/volto my-volto-project --addon volto-iframe-block
 cd my-volto-project
 ```
 
-Add `volto-iframe-block` to your package.json:
+Add `@kitconcept/volto-iframe-block` to your package.json:
 
 ```JSON
 "addons": [
-    "volto-iframe-block"
+    "@kitconcept/volto-iframe-block"
 ],
 
 "dependencies": {
-    "volto-iframe-block": "*"
+    "@kitconcept/volto-iframe-block": "*"
 }
 ```
 
@@ -52,24 +51,18 @@ yarn start
 
 ### Volto 18 and later
 
-Add `volto-iframe-block` to your `package.json`:
+Add `@kitconcept/volto-iframe-block` to your `package.json`:
 
 ```json
 "dependencies": {
-    "volto-iframe-block": "*"
+    "@kitconcept/volto-iframe-block": "*"
 }
 ```
 
-Add `volto-iframe-block` to your `volto.config.js`:
+Add `@kitconcept/volto-iframe-block` to your `volto.config.js`:
 
 ```javascript
-const addons = ['volto-iframe-block'];
-```
-
-If this package provides a Volto theme, and you want to activate it, then add the following to your `volto.config.js`:
-
-```javascript
-const theme = 'volto-iframe-block';
+const addons = ['@kitconcept/volto-iframe-block'];
 ```
 
 ## Test installation
@@ -79,7 +72,7 @@ Visit http://localhost:3000/ in a browser, login, and check the awesome new feat
 
 ## Development
 
-The development of this add-on is done in isolation using a new approach using pnpm workspaces and latest `mrs-developer` and other Volto core improvements.
+The development of this add-on is done in isolation with a new approach using pnpm workspaces and latest `mrs-developer` and other Volto core improvements.
 For this reason, it only works with pnpm and Volto 18 (currently in alpha).
 
 

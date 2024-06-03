@@ -1,15 +1,12 @@
 import React from 'react';
+import cx from 'classnames';
 
 const IframeView = (props) => {
-  const { data } = props;
+  const { className, data } = props;
+
   return (
-    <div>
-      <iframe
-        src={data.src}
-        title="iframe Example 1"
-        width={data.width}
-        height={data.height}
-      ></iframe>
+    <div className={cx('block iframe align', data.align, className)}>
+      <iframe src={data.src} title={data.title} />
     </div>
   );
 };

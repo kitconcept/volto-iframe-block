@@ -1,7 +1,7 @@
 import React from 'react';
 import { BlockDataForm, Icon } from '@plone/volto/components';
 import { defineMessages, useIntl } from 'react-intl';
-import videoSVG from '@plone/volto/icons/videocamera.svg';
+import applicationSVG from '@plone/volto/icons/application.svg';
 import { IframeBlockSchema } from './schema';
 
 const messages = defineMessages({
@@ -25,7 +25,7 @@ const IframeSidebar = (props) => {
       {!data.src ? (
         <div className="sidebar-metadata-container" secondary>
           {props.intl.formatMessage(messages.NoIframe)}
-          <Icon name={videoSVG} size="100px" color="#b8c6c8" />
+          <Icon name={applicationSVG} size="100px" color="#b8c6c8" />
         </div>
       ) : (
         <BlockDataForm

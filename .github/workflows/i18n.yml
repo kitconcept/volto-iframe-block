@@ -2,10 +2,10 @@ name: i18n
 on:
   push:
     paths:
-      - "*.js"
-      - "*.json"
-      - "*.yaml"
-      - "packages/**"
+      - '*.js'
+      - '*.json'
+      - '*.yaml'
+      - 'packages/**'
 
 env:
   NODE_VERSION: 20.x
@@ -23,13 +23,8 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - uses: pnpm/action-setup@v3
-        name: Install pnpm
-        with:
-          version: 9
-          # We don't want to install until later,
-          # when the cache and Cypress are in place
-          run_install: false
+      - name: Enable corepack
+        run: corepack enable
 
       - name: Get pnpm store directory
         shell: bash

@@ -1,85 +1,150 @@
-# volto-iframe-block
+# Volto Iframe Block (volto-iframe-block)
 
-## Introduction
+A new add-on for Volto
+
+[![npm](https://img.shields.io/npm/v/volto-iframe-block)](https://www.npmjs.com/package/volto-iframe-block)
+[![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://kitconcept.github.io/volto-iframe-block/)
+[![Code analysis checks](https://github.com/kitconcept/volto-iframe-block/actions/workflows/code.yml/badge.svg)](https://github.com/kitconcept/volto-iframe-block/actions/workflows/code.yml)
+[![Unit tests](https://github.com/kitconcept/volto-iframe-block/actions/workflows/unit.yml/badge.svg)](https://github.com/kitconcept/volto-iframe-block/actions/workflows/unit.yml)
+
+## Features
+
+<!-- List your awesome features here -->
+
+## Installation
+
+To install your project, you must choose the method appropriate to your version of Volto.
+
+
+### Volto 17 and earlier
+
+Create a new Volto project (you can skip this step if you already have one):
+
+```
+npm install -g yo @plone/generator-volto
+yo @plone/volto my-volto-project --addon volto-iframe-block
+cd my-volto-project
+```
+
+Add `volto-iframe-block` to your package.json:
+
+```JSON
+"addons": [
+    "volto-iframe-block"
+],
+
+"dependencies": {
+    "volto-iframe-block": "*"
+}
+```
+
+Download and install the new add-on by running:
+
+```
+yarn install
+```
+
+Start volto with:
+
+```
+yarn start
+```
+
+### Volto 18 and later
+
+Add `volto-iframe-block` to your `package.json`:
+
+```json
+"dependencies": {
+    "volto-iframe-block": "*"
+}
+```
+
+Add `volto-iframe-block` to your `volto.config.js`:
+
+```javascript
+const addons = ['volto-iframe-block'];
+```
+
+If this package provides a Volto theme, and you want to activate it, then add the following to your `volto.config.js`:
+
+```javascript
+const theme = 'volto-iframe-block';
+```
+
+## Test installation
+
+Visit http://localhost:3000/ in a browser, login, and check the awesome new features.
+
 
 ## Development
 
-You can develop an add-on in isolation using the boilerplate already provided by the add-on generator.
-The project is configured to have the current add-on installed and ready to work with.
-This is useful to bootstrap an isolated environment that can be used to quickly develop the add-on or for demo purposes.
-It's also useful when testing an add-on in a CI environment.
+The development of this add-on is done in isolation using a new approach using pnpm workspaces and latest `mrs-developer` and other Volto core improvements.
+For this reason, it only works with pnpm and Volto 18 (currently in alpha).
 
-```{note}
-It's quite similar when you develop a Plone backend add-on in the Python side, and embed a ready to use Plone build (using buildout or pip) in order to develop and test the package.
+
+### Pre-requisites
+
+-   [Node.js](https://6.docs.plone.org/install/create-project.html#node-js)
+-   [Make](https://6.docs.plone.org/install/create-project.html#make)
+-   [Docker](https://6.docs.plone.org/install/create-project.html#docker)
+
+
+### Make convenience commands
+
+Run `make help` to list the available commands.
+
+```text
+help                                 Show this help
+install                              Installs the dev environment using mrs-developer
+i18n                                 Sync i18n
+format                               Format codebase
+lint                                 Lint Codebase
+test                                 Run unit tests
+test-ci                              Run unit tests in CI
+storybook-start                      Start Storybook server on port 6006
+storybook-build                      Build Storybook
+start-backend-docker                 Starts a Docker-based backend for developing
+start-test-acceptance-frontend-dev   Start acceptance frontend in dev mode
+start-test-acceptance-frontend       Start acceptance frontend in prod mode
+start-test-acceptance-server         Start acceptance server
+test-acceptance                      Start Cypress in interactive mode
+test-acceptance-headless             Run cypress tests in headless mode for CI
 ```
 
-The dockerized approach performs all these actions in a custom built docker environment:
+### Development environment set up
 
-1. Generates a vanilla project using the official Volto Yo Generator (@plone/generator-volto)
-2. Configures it to use the add-on with the name stated in the `package.json`
-3. Links the root of the add-on inside the created project
-
-After that you can use the inner dockerized project, and run any standard Volto command for linting, acceptance test or unit tests using Makefile commands provided for your convenience.
-
-### Setup the environment
-
-Run once
+Install package requirements.
 
 ```shell
-make dev
+make install
 ```
 
-which will build and launch the backend and frontend containers.
-There's no need to build them again after doing it the first time unless something has changed from the container setup.
+### Start developing
 
-In order to make the local IDE play well with this setup, is it required to run once `yarn` to install locally the required packages (ESlint, Prettier, Stylelint).
-
-Run
+Start the backend.
 
 ```shell
-yarn
+make start-backend-docker
 ```
 
-### Build the containers manually
-
-Run
+In a separate terminal session, start the frontend.
 
 ```shell
-make build-backend
-make build-addon
+pnpm start
 ```
 
-### Run the containers
+### Lint code
 
-Run
-
-```shell
-make start-dev
-```
-
-This will start both the frontend and backend containers.
-
-### Stop Backend (Docker)
-
-After developing, in order to stop the running backend, don't forget to run:
-
-Run
-
-```shell
-make stop-backend
-```
-
-### Linting
-
-Run
+Run ESlint, Prettier, and Stylelint in analyze mode.
 
 ```shell
 make lint
 ```
 
-### Formatting
+### Format code
 
-Run
+Run ESlint, Prettier, and Stylelint in fix mode.
 
 ```shell
 make format
@@ -87,7 +152,7 @@ make format
 
 ### i18n
 
-Run
+Extract the i18n messages to locales.
 
 ```shell
 make i18n
@@ -95,56 +160,34 @@ make i18n
 
 ### Unit tests
 
-Run
+Run unit tests.
 
 ```shell
 make test
 ```
 
-### Acceptance tests
+### Run Cypress tests
 
-Run once
+Run each of these steps in separate terminal sessions.
+
+In the first session, start the frontend in development mode.
 
 ```shell
-make install-acceptance
+make start-test-acceptance-frontend-dev
 ```
 
-For starting the servers
-
-Run
+In the second session, start the backend acceptance server.
 
 ```shell
 make start-test-acceptance-server
 ```
 
-The frontend is run in dev mode, so development while writing tests is possible.
-
-Run
+In the third session, start the Cypress interactive test runner.
 
 ```shell
 make test-acceptance
 ```
 
-To run Cypress tests afterwards.
+## License
 
-When finished, don't forget to shutdown the backend server.
-
-```shell
-make stop-test-acceptance-server
-```
-
-### Release
-
-Run
-
-```shell
-make release
-```
-
-For releasing a RC version
-
-Run
-
-```shell
-make release-rc
-```
+The project is licensed under the MIT license.

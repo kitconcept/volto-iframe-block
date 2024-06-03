@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plone\n"
+"POT-Creation-Date: 2024-06-03T09:58:15.083Z\n"
+"Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
+"Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: volto\n"
+
+#. Default: "Height"
+#: components/schema
+msgid "Height"
+msgstr ""
+
+#. Default: "Iframe"
+#: components/Data
+#: components/schema
+msgid "Iframe"
+msgstr ""
+
+#. Default: "No Iframe source selected"
+#: components/Data
+msgid "No Iframe source selected"
+msgstr ""
+
+#. Default: "Source"
+#: components/schema
+msgid "Source"
+msgstr ""
+
+#. Default: "Type a Iframe URL"
+#: components/Edit
+msgid "Type a Iframe URL"
+msgstr ""
+
+#. Default: "Width"
+#: components/schema
+msgid "Width"
+msgstr ""

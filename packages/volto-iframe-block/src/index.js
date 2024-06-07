@@ -3,8 +3,6 @@ import applicationSVG from '@plone/volto/icons/application.svg';
 import IframeView from './components/View';
 import IframeEdit from './components/Edit';
 
-import './theme/_main.scss';
-
 const applyConfig = (config) => {
   config.blocks.blocksConfig.iframe = {
     id: 'iframe',

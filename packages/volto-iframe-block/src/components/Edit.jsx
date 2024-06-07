@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
+import Toast from '@plone/volto/components/manage/Toast/Toast';
 
 import { defineMessages } from 'react-intl';
 import { Icon, SidebarPortal } from '@plone/volto/components';
@@ -7,11 +9,20 @@ import aheadSVG from '@plone/volto/icons/ahead.svg';
 import applicationSVG from '@plone/volto/icons/application.svg';
 import IframeView from './View';
 import IframeSidebar from './Data';
+import { isValidUrl } from './schema';
 
 const messages = defineMessages({
   InputPlaceholder: {
     id: 'Type a Iframe URL',
     defaultMessage: 'Type a Iframe URL',
+  },
+  IncorrectUrl: {
+    id: 'Invalid url',
+    defaultMessage: 'Invalid url',
+  },
+  Error: {
+    id: 'Error',
+    defaultMessage: 'Error',
   },
 });
 
@@ -28,10 +39,21 @@ const IframeEdit = (props) => {
   };
 
   const onSubmitUrl = () => {
-    props.onChangeBlock(props.block, {
-      ...props.data,
-      src: url,
-    });
+    if (isValidUrl(url)) {
+      props.onChangeBlock(props.block, {
+        ...props.data,
+        src: url,
+      });
+      return;
+    }
+
+    toast.error(
+      <Toast
+        error
+        title={intl.formatMessage(messages.Error)}
+        content={intl.formatMessage(messages.IncorrectUrl)}
+      />,
+    );
   };
 
   const onKeyDownVariantMenuForm = (e) => {

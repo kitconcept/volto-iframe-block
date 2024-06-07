@@ -3,6 +3,8 @@ import applicationSVG from '@plone/volto/icons/application.svg';
 import IframeView from './components/View';
 import IframeEdit from './components/Edit';
 
+import './theme/_main.scss';
+
 const applyConfig = (config) => {
   config.blocks.blocksConfig.iframe = {
     id: 'iframe',
@@ -15,6 +17,7 @@ const applyConfig = (config) => {
     restricted: false,
     mostUsed: false,
     sidebarTab: 1,
+    validUrls: [],
   };
   return config;
 };

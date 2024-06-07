@@ -1,4 +1,6 @@
+import config from '@plone/volto/registry';
 import { defineMessages } from 'react-intl';
+import { isEmpty } from 'lodash';
 
 const messages = defineMessages({
   Iframe: {
@@ -31,6 +33,18 @@ const messages = defineMessages({
     defaultMessage: 'Open in a new tab',
   },
 });
+
+export function isValidUrl(url) {
+  const patterns = config.blocks.blocksConfig.iframe.validUrls;
+
+  if (isEmpty(patterns)) {
+    return true;
+  } else if (patterns.some((pattern) => pattern.includes(url))) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 export const IframeBlockSchema = (props) => ({
   title: props.intl.formatMessage(messages.Iframe),

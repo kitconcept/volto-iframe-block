@@ -4,12 +4,27 @@ import { isValidUrl } from './schema';
 
 const IframeView = (props) => {
   const { className, data } = props;
+  const width =
+    data.width === 'center'
+      ? '620px'
+      : data.width === 'wide'
+        ? '940px'
+        : data.width === 'full'
+          ? '1440px'
+          : '940px'; // Default to 'wide' width if no match
 
   return (
     <div className={cx('block iframe align', data.align, className)}>
-      {data.src && isValidUrl(data.src) && (
-        <iframe src={data.src} title={data.title} />
-      )}
+      <center>
+        {data.src && isValidUrl(data.src) && (
+          <iframe
+            src={data.src}
+            title={data.title}
+            width={width}
+            height={data.height}
+          />
+        )}
+      </center>
     </div>
   );
 };

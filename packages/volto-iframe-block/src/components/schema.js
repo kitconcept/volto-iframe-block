@@ -15,9 +15,13 @@ const messages = defineMessages({
     id: 'Title',
     defaultMessage: 'Title',
   },
-  Align: {
-    id: 'Alignment',
-    defaultMessage: 'Alignment',
+  Width: {
+    id: 'Width',
+    defaultMessage: 'Width',
+  },
+  Height: {
+    id: 'Height',
+    defaultMessage: 'Height',
   },
   TitleTextHint: {
     id: 'Provide an iFrame title for better accessibility for screenreaders (title will not be visible),',
@@ -31,6 +35,10 @@ const messages = defineMessages({
   openLinkInNewTab: {
     id: 'Open in a new tab',
     defaultMessage: 'Open in a new tab',
+  },
+  TextHintPixels: {
+    id: 'Values are in Pixels',
+    defaultMessage: 'Values are in Pixels',
   },
 });
 
@@ -53,7 +61,7 @@ export const IframeBlockSchema = (props) => ({
     {
       id: 'default',
       title: 'Default',
-      fields: ['src', 'title', 'align'],
+      fields: ['src', 'title', 'width', 'height'],
     },
   ],
 
@@ -79,10 +87,15 @@ export const IframeBlockSchema = (props) => ({
         </>
       ),
     },
-    align: {
-      title: props.intl.formatMessage(messages.Align),
+    width: {
+      title: props.intl.formatMessage(messages.Width),
       widget: 'align',
       actions: ['center', 'wide', 'full'],
+    },
+    height: {
+      title: props.intl.formatMessage(messages.Height),
+      type: 'number',
+      description: props.intl.formatMessage(messages.TextHintPixels),
     },
   },
   required: [],

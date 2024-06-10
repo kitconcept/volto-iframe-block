@@ -15,6 +15,7 @@ const applyConfig = (config) => {
     restricted: false,
     mostUsed: false,
     sidebarTab: 1,
+    validUrls: [],
   };
   return config;
 };

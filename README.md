@@ -1,4 +1,4 @@
-# Volto Iframe Block (volto-iframe-block)
+# Volto iFrame Block (volto-iframe-block)
 
 [![npm](https://img.shields.io/npm/v/@kitconcept/volto-iframe-block)](https://www.npmjs.com/package/@kitconcept/volto-iframe-block)
 [![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://kitconcept.github.io/volto-iframe-block/)
@@ -85,7 +85,11 @@ Visit http://localhost:3000/ in a browser, login, and check the awesome new feat
 
 ## Block configuration
 
-This block does not have any configuration options yet.
+`validUrls` allows you to restrict the use of the iFrame block by restricting the URLs that editors are allowed to embed in the `iframe`. If an unvalid URL is entered, an error is thrown.
+
+```js
+config.blocks.blocksConfig.iframe.validUrls = [''];
+```
 
 ## License
 

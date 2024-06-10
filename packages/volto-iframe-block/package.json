@@ -1,7 +1,9 @@
 {
-  "name": "volto-iframe-block",
+  "name": "@kitconcept/volto-iframe-block",
   "version": "1.0.0-alpha.0",
-  "description": "A new add-on for Volto",
+  "description": "volto-iframe-block: Volto add-on",
+  "author": "kitconcept GmbH",
+  "homepage": "https://github.com/kitconcept/volto-iframe-block",
   "main": "src/index.js",
   "license": "MIT",
   "keywords": [
@@ -10,8 +12,6 @@
     "plone",
     "react"
   ],
-  "author": "kitconcept GmbH",
-  "homepage": "https://github.com/kitconcept/volto-iframe-block#readme",
   "repository": {
     "type": "git",
     "url": "git@github.com:kitconcept/volto-iframe-block.git"

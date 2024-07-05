@@ -1,8 +1,10 @@
 import React from 'react';
 import { BlockDataForm, Icon } from '@plone/volto/components';
-import { defineMessages, useIntl } from 'react-intl';
-import videoSVG from '@plone/volto/icons/videocamera.svg';
+import { defineMessages } from 'react-intl';
 import { IframeBlockSchema } from './schema';
+
+import applicationSVG from '@plone/volto/icons/application.svg';
+import trashSVG from '@plone/volto/icons/delete.svg';
 
 const messages = defineMessages({
   Iframe: {
@@ -16,16 +18,24 @@ const messages = defineMessages({
 });
 
 const IframeSidebar = (props) => {
-  const { data, block, onChangeBlock } = props;
-  const intl = useIntl();
+  const { intl, data, block, onChangeBlock } = props;
   const schema = IframeBlockSchema({ ...props, intl });
+
+  const resetBlock = () => {
+    onChangeBlock(block, {
+      ...data,
+      src: '',
+      title: '',
+      align: '',
+    });
+  };
 
   return (
     <>
       {!data.src ? (
         <div className="sidebar-metadata-container" secondary>
-          {props.intl.formatMessage(messages.NoIframe)}
-          <Icon name={videoSVG} size="100px" color="#b8c6c8" />
+          {intl.formatMessage(messages.NoIframe)}
+          <Icon name={applicationSVG} size="100px" color="#b8c6c8" />
         </div>
       ) : (
         <BlockDataForm
@@ -40,6 +50,11 @@ const IframeSidebar = (props) => {
           onChangeBlock={onChangeBlock}
           formData={data}
           block={block}
+          headerActions={
+            <button onClick={resetBlock}>
+              <Icon name={trashSVG} size="24px" color="red" />
+            </button>
+          }
         />
       )}
     </>

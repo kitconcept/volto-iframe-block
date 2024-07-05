@@ -1,7 +1,7 @@
 {
-  "name": "volto-iframe-block",
+  "name": "@kitconcept/volto-iframe-block",
   "version": "1.0.0-alpha.0",
-  "description": "A new add-on for Volto",
+  "description": "volto-iframe-block: Volto Add-on",
   "main": "src/index.js",
   "license": "MIT",
   "keywords": [
@@ -26,13 +26,10 @@
     "release-major-alpha": "release-it major --preRelease=alpha",
     "release-alpha": "release-it --preRelease=alpha"
   },
-  "dependencies": {
-    "@plone/components": "1.7.0"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-intl": "3.8.0"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@plone/scripts": "^3.6.1",

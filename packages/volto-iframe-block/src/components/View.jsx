@@ -1,15 +1,28 @@
 import React from 'react';
+import cx from 'classnames';
+import { isValidUrl } from './schema';
 
 const IframeView = (props) => {
-  const { data } = props;
+  const { className, data } = props;
+  const width =
+    data.width === 'center'
+      ? '620px'
+      : data.width === 'wide'
+        ? '940px'
+        : data.width === 'full' && '1440px';
+
   return (
-    <div>
-      <iframe
-        src={data.src}
-        title="iframe Example 1"
-        width={data.width}
-        height={data.height}
-      ></iframe>
+    <div className={cx('block iframe align', data.align, className)}>
+      <center>
+        {data.src && isValidUrl(data.src) && (
+          <iframe
+            src={data.src}
+            title={data.title}
+            width={width}
+            height={data.height}
+          />
+        )}
+      </center>
     </div>
   );
 };

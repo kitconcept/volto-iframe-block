@@ -1,4 +1,4 @@
-const addons = ['volto-iframe-block'];
+const addons = ['@kitconcept/volto-iframe-block'];
 const theme = '';
 
 module.exports = {

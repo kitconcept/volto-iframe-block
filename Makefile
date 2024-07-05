@@ -19,11 +19,14 @@ GREEN=`tput setaf 2`
 RESET=`tput sgr0`
 YELLOW=`tput setaf 3`
 
+GIT_FOLDER=$(CURRENT_DIR)/.git
+PRE_COMMIT=pipx run --spec 'pre-commit==3.7.1' pre-commit
+
 PLONE_VERSION=6
 DOCKER_IMAGE=plone/server-dev:${PLONE_VERSION}
 DOCKER_IMAGE_ACCEPTANCE=plone/server-acceptance:${PLONE_VERSION}
 
-ADDON_NAME='volto-iframe-block'
+ADDON_NAME='@kitconcept/volto-iframe-block'
 
 .PHONY: help
 help: ## Show this help
@@ -33,8 +36,11 @@ help: ## Show this help
 
 .PHONY: install
 install: ## Installs the add-on in a development environment
+	@echo "$(GREEN)Install$(RESET)"
+	if [ -d $(GIT_FOLDER) ]; then $(PRE_COMMIT) install; else echo "$(RED) Not installing pre-commit$(RESET)";fi
 	pnpm dlx mrs-developer missdev --no-config --fetch-https
 	pnpm i
+	make build-deps
 
 .PHONY: start
 start: ## Starts Volto, allowing reloading of the add-on during development
@@ -43,6 +49,15 @@ start: ## Starts Volto, allowing reloading of the add-on during development
 .PHONY: build
 build: ## Build a production bundle for distribution of the project with the add-on
 	pnpm build
+
+core/packages/registry/dist: core/packages/registry/src
+	pnpm --filter @plone/registry build
+
+core/packages/components/dist: core/packages/components/src
+	pnpm --filter @plone/components build
+
+.PHONY: build-deps
+build-deps: core/packages/registry/dist core/packages/components/dist ## Build dependencies
 
 .PHONY: i18n
 i18n: ## Sync i18n
@@ -54,8 +69,8 @@ ci-i18n: ## Check if i18n is not synced
 
 .PHONY: format
 format: ## Format codebase
-	pnpm lint:fix
 	pnpm prettier:fix
+	pnpm lint:fix
 	pnpm stylelint:fix
 
 .PHONY: lint
@@ -78,6 +93,8 @@ test: ## Run unit tests
 
 .PHONY: test-ci
 ci-test: ## Run unit tests in CI
+	# Unit Tests need the i18n to be built
+	VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto i18n
 	CI=1 RAZZLE_JEST_CONFIG=$(CURRENT_DIR)/jest-addon.config.js pnpm --filter @plone/volto test -- --passWithNoTests
 
 .PHONY: backend-docker-start
@@ -95,7 +112,7 @@ storybook-start: ## Start Storybook server on port 6006
 storybook-build: ## Build Storybook
 	@echo "$(GREEN)==> Build Storybook$(RESET)"
 	mkdir -p $(CURRENT_DIR)/.storybook-build
-	pnpm run build-storybook -o $(CURRENT_DIR)/.storybook-build
+	pnpm run storybook-build -o $(CURRENT_DIR)/.storybook-build
 
 ## Acceptance
 .PHONY: acceptance-frontend-dev-start

@@ -64,6 +64,7 @@ const IframeEdit = (props) => {
     }
   };
 
+  console.log(url);
   return (
     <div>
       {data.src ? (
@@ -79,28 +80,35 @@ const IframeEdit = (props) => {
                 placeholder={intl.formatMessage(messages.InputPlaceholder)}
                 value={url}
               />
-              {url && (
+              <div>
+                {url && (
+                  <div>
+                    <button
+                      className="cancel"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        resetSubmitUrl();
+                      }}
+                    >
+                      <Icon name={clearSVG} size="30px" />
+                    </button>
+                  </div>
+                )}
                 <div>
                   <button
-                    className="cancel"
+                    disabled={!url}
                     onClick={(e) => {
                       e.stopPropagation();
-                      resetSubmitUrl();
+                      onSubmitUrl();
                     }}
                   >
-                    <Icon name={clearSVG} size="30px" />
+                    <Icon
+                      name={aheadSVG}
+                      size="30px"
+                      color={!url ? '#007fb1b3' : '#007eb1'}
+                    />
                   </button>
                 </div>
-              )}
-              <div>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onSubmitUrl();
-                  }}
-                >
-                  <Icon name={aheadSVG} size="30px" color="#007eb1" />
-                </button>
               </div>
             </div>
           </center>

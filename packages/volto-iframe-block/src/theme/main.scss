@@ -1,0 +1,29 @@
+.block-editor-iframe .block.iframe {
+  .toolbar-inner {
+    max-width: 350px;
+    justify-content: space-between;
+
+    > div {
+      display: flex;
+    }
+
+    button,
+    input {
+      border: none;
+      background: none;
+
+      &:focus-visible {
+        outline: none;
+      }
+    }
+
+    button {
+      &:hover {
+        cursor: pointer;
+      }
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+  }
+}

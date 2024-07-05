@@ -9,9 +9,7 @@ const IframeView = (props) => {
       ? '620px'
       : data.width === 'wide'
         ? '940px'
-        : data.width === 'full'
-          ? '1440px'
-          : '940px'; // Default to 'wide' width if no match
+        : data.width === 'full' && '1440px';
 
   return (
     <div className={cx('block iframe align', data.align, className)}>

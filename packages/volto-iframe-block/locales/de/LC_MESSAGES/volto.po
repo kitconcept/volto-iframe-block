@@ -10,3 +10,69 @@ msgstr ""
 "Content-Type: \n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. Default: "Error"
+#: components/Edit
+msgid "Error"
+msgstr "Fehler"
+
+#. Default: "Height"
+#: components/schema
+msgid "Height"
+msgstr "Höhe"
+
+#. Default: "Iframe"
+#: components/Data
+#: components/schema
+msgid "Iframe"
+msgstr "Iframe"
+
+#. Default: "Invalid url"
+#: components/Edit
+msgid "Invalid url"
+msgstr "Ungültige Url"
+
+#. Default: "No Iframe source selected"
+#: components/Data
+msgid "No Iframe source selected"
+msgstr "Keine Iframe-Quelle angegeben"
+
+#. Default: "Open in a new tab"
+#: components/schema
+msgid "Open in a new tab"
+msgstr "In neuem Tab öffnen"
+
+#. Default: "Provide an iFrame title for better accessibility for screenreaders (title will not be visible),"
+#: components/schema
+msgid "Provide an iFrame title for better accessibility for screenreaders (title will not be visible),"
+msgstr "Geben Sie einen iFrame-Titel an, um die Zugänglichkeit für Screenreader zu verbessern (der Titel wird nicht angezeigt),"
+
+#. Default: "Source"
+#: components/schema
+msgid "Source"
+msgstr "Quelle"
+
+#. Default: "Title"
+#: components/schema
+msgid "Title"
+msgstr "Titel"
+
+#. Default: "Type a Iframe URL"
+#: components/Edit
+msgid "Type a Iframe URL"
+msgstr "Geben Sie eine URL ein"
+
+#. Default: "Values are in Pixels"
+#: components/schema
+msgid "Values are in Pixels"
+msgstr "Werte werden in Pixeln angegeben"
+
+#. Default: "Width"
+#: components/schema
+msgid "Width"
+msgstr "Weite"
+
+#. Default: "see WCAG 2.1"
+#: components/schema
+msgid "see WCAG 2.1"
+msgstr "siehe WCAG 2.1"

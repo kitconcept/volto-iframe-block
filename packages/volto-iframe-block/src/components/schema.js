@@ -91,6 +91,7 @@ export const IframeBlockSchema = (props) => ({
       title: props.intl.formatMessage(messages.Width),
       widget: 'align',
       actions: ['center', 'wide', 'full'],
+      default: 'wide',
     },
     height: {
       title: props.intl.formatMessage(messages.Height),

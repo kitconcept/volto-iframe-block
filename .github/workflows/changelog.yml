@@ -7,7 +7,7 @@ on:
 
 env:
   NODE_VERSION: 20.x
-  ADDON_NAME: volto-addon
+  ADDON_NAME: volto-iframe-block
 
 jobs:
   build:

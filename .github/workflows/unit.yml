@@ -2,10 +2,11 @@ name: Unit Tests
 on:
   push:
     paths:
-      - '*.js'
-      - '*.json'
-      - '*.yaml'
-      - 'packages/**'
+      - "*.js"
+      - "*.json"
+      - "*.yaml"
+      - "packages/**"
+      - ".github/workflows/unit.yml"
 
 env:
   NODE_VERSION: 20.x

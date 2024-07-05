@@ -15,34 +15,3 @@ msgstr ""
 "Language-Name: Português do Brasil\n"
 "Preferred-Encodings: utf-8\n"
 "Domain: volto\n"
-
-#. Default: "Height"
-#: components/schema
-msgid "Height"
-msgstr ""
-
-#. Default: "Iframe"
-#: components/Data
-#: components/schema
-msgid "Iframe"
-msgstr ""
-
-#. Default: "No Iframe source selected"
-#: components/Data
-msgid "No Iframe source selected"
-msgstr ""
-
-#. Default: "Source"
-#: components/schema
-msgid "Source"
-msgstr ""
-
-#. Default: "Type a Iframe URL"
-#: components/Edit
-msgid "Type a Iframe URL"
-msgstr ""
-
-#. Default: "Width"
-#: components/schema
-msgid "Width"
-msgstr ""

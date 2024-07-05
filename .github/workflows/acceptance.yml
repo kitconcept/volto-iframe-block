@@ -2,23 +2,25 @@ name: Acceptance tests
 on:
   push:
     paths:
-      - '*.js'
-      - '*.json'
-      - '*.yaml'
-      - 'cypress/**'
-      - 'packages/**'
+      - "*.js"
+      - "*.json"
+      - "*.yaml"
+      - "cypress/**"
+      - "packages/**"
+      - ".github/workflows/acceptance.yml"
 
 env:
   NODE_VERSION: 20.x
   CYPRESS_RETRIES: 2
 
 jobs:
+
   acceptance:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node.js
+      - name: Use Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
@@ -83,7 +85,7 @@ jobs:
 
           log-output-if: failure
 
-      - run: make test-acceptance-headless
+      - run: make ci-acceptance-test
 
       # Upload Cypress screenshots
       - uses: actions/upload-artifact@v4

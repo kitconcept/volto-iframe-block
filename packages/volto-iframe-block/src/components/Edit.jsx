@@ -64,7 +64,6 @@ const IframeEdit = (props) => {
     }
   };
 
-  console.log(url);
   return (
     <div>
       {data.src ? (

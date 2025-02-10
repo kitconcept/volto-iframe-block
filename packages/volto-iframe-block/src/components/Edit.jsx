@@ -3,7 +3,8 @@ import { toast } from 'react-toastify';
 import Toast from '@plone/volto/components/manage/Toast/Toast';
 
 import { defineMessages } from 'react-intl';
-import { Icon, SidebarPortal } from '@plone/volto/components';
+import Icon from '@plone/volto/components/theme/Icon/Icon';
+import SidebarPortal from '@plone/volto/components/manage/Sidebar/SidebarPortal';
 import clearSVG from '@plone/volto/icons/clear.svg';
 import aheadSVG from '@plone/volto/icons/ahead.svg';
 import applicationSVG from '@plone/volto/icons/application.svg';

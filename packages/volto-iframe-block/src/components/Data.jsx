@@ -1,5 +1,6 @@
 import React from 'react';
-import { BlockDataForm, Icon } from '@plone/volto/components';
+import Icon from '@plone/volto/components/theme/Icon/Icon';
+import BlockDataForm from '@plone/volto/components/manage/Form/BlockDataForm';
 import { defineMessages } from 'react-intl';
 import { IframeBlockSchema } from './schema';
 

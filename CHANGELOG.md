@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0 (2025-02-10)
+
+### Internal
+
+- Update to latest Volto. @sneridagh [#5](https://github.com/kitconcept/volto-iframe-block/issue/5)
+
 ## 1.0.0-alpha.2 (2024-07-05)
 
 ## 1.0.0-alpha.1 (2024-07-05)

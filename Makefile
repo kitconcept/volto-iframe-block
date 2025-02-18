@@ -33,6 +33,11 @@ help: ## Show this help
 
 # Dev Helpers
 
+.PHONY: clean
+clean: ## Remove old artifacts
+	@echo "$(RED)==> Cleaning frontend environment and build$(RESET)"
+	rm -Rf core node_modules packages/volto-iframe-block/node_modules
+
 .PHONY: install
 install: ## Installs the add-on in a development environment
 	@echo "$(GREEN)Install$(RESET)"
@@ -98,7 +103,7 @@ ci-test: ## Run unit tests in CI
 .PHONY: backend-docker-start
 backend-docker-start:	## Starts a Docker-based backend for development
 	@echo "$(GREEN)==> Start Docker-based Plone Backend$(RESET)"
-	docker run -it --rm --name=backend -p 8080:8080 -e SITE=Plone $(DOCKER_IMAGE)
+	docker run -d -it --rm --name=backend -p 8080:8080 -e SITE=Plone $(DOCKER_IMAGE)
 
 ## Storybook
 .PHONY: storybook-start

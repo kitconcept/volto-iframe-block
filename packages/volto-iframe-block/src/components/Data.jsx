@@ -19,16 +19,20 @@ const messages = defineMessages({
 });
 
 const IframeSidebar = (props) => {
-  const { intl, data, block, onChangeBlock } = props;
+  const { intl, data, block, onChangeBlock, resetSubmitUrl } = props;
   const schema = IframeBlockSchema({ ...props, intl });
 
   const resetBlock = () => {
     onChangeBlock(block, {
       ...data,
-      src: '',
-      title: '',
-      align: '',
+      src: undefined,
+      title: undefined,
+      description: undefined,
+      align: undefined,
+      height: undefined,
+      credit: undefined,
     });
+    resetSubmitUrl();
   };
 
   return (

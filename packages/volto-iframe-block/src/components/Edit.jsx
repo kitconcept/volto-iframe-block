@@ -118,7 +118,7 @@ const IframeEdit = (props) => {
       )}
 
       <SidebarPortal selected={props.selected}>
-        <IframeSidebar {...props} />
+        <IframeSidebar {...props} resetSubmitUrl={resetSubmitUrl} />
       </SidebarPortal>
     </div>
   );

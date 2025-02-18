@@ -1,4 +1,5 @@
 import config from '@plone/volto/registry';
+import { isEmpty } from 'lodash';
 
 export function isValidUrl(url) {
   const patterns = config.blocks.blocksConfig.iframe.validUrls;

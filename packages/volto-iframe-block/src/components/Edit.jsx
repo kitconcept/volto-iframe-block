@@ -84,6 +84,7 @@ const IframeEdit = (props) => {
                 {url && (
                   <div>
                     <button
+                      type="button"
                       className="cancel"
                       onClick={(e) => {
                         e.stopPropagation();
@@ -96,6 +97,7 @@ const IframeEdit = (props) => {
                 )}
                 <div>
                   <button
+                    type="button"
                     disabled={!url}
                     onClick={(e) => {
                       e.stopPropagation();

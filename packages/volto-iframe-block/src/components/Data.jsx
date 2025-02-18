@@ -52,7 +52,7 @@ const IframeSidebar = (props) => {
           formData={data}
           block={block}
           headerActions={
-            <button onClick={resetBlock}>
+            <button type="button" onClick={resetBlock}>
               <Icon name={trashSVG} size="24px" color="red" />
             </button>
           }

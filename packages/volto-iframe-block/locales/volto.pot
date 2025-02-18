@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2024-07-05T08:15:02.107Z\n"
+"POT-Creation-Date: 2025-02-18T09:54:00.232Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -12,6 +12,16 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8\n"
 "Domain: volto\n"
+
+#. Default: "Credit"
+#: components/schema
+msgid "Credit"
+msgstr ""
+
+#. Default: "Description"
+#: components/schema
+msgid "Description"
+msgstr ""
 
 #. Default: "Error"
 #: components/Edit

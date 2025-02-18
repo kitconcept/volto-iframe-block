@@ -13,6 +13,14 @@ const messages = defineMessages({
     id: 'Title',
     defaultMessage: 'Title',
   },
+  Description: {
+    id: 'Description',
+    defaultMessage: 'Description',
+  },
+  Credit: {
+    id: 'Credit',
+    defaultMessage: 'Credit',
+  },
   Width: {
     id: 'Width',
     defaultMessage: 'Width',
@@ -72,6 +80,14 @@ export const IframeBlockSchema = (props) => ({
           </a>{' '}
         </>
       ),
+    },
+    description: {
+      title: props.intl.formatMessage(messages.Description),
+      widget: 'textarea',
+    },
+    credit: {
+      title: 'Credit',
+      widget: 'text',
     },
     width: {
       title: props.intl.formatMessage(messages.Width),

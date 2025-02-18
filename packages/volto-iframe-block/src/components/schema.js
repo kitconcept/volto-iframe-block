@@ -55,7 +55,7 @@ export const IframeBlockSchema = (props) => ({
     {
       id: 'default',
       title: 'Default',
-      fields: ['src', 'title', 'description', 'width', 'height'],
+      fields: ['src', 'title', 'description', 'credit', 'width', 'height'],
     },
   ],
 

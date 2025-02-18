@@ -1,6 +1,7 @@
-import React from 'react';
 import cx from 'classnames';
-import { isValidUrl } from './schema';
+import React from 'react';
+
+import { isValidUrl } from '../helpers/isValidUrl';
 
 const IframeView = (props) => {
   const { className, data } = props;

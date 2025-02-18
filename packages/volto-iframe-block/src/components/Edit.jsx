@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { toast } from 'react-toastify';
-import Toast from '@plone/volto/components/manage/Toast/Toast';
-
-import { defineMessages } from 'react-intl';
-import Icon from '@plone/volto/components/theme/Icon/Icon';
 import SidebarPortal from '@plone/volto/components/manage/Sidebar/SidebarPortal';
-import clearSVG from '@plone/volto/icons/clear.svg';
+import Toast from '@plone/volto/components/manage/Toast/Toast';
+import Icon from '@plone/volto/components/theme/Icon/Icon';
 import aheadSVG from '@plone/volto/icons/ahead.svg';
 import applicationSVG from '@plone/volto/icons/application.svg';
-import IframeView from './View';
+import clearSVG from '@plone/volto/icons/clear.svg';
+import React, { useState } from 'react';
+import { defineMessages } from 'react-intl';
+import { toast } from 'react-toastify';
+
+import { isValidUrl } from '../helpers/isValidUrl';
 import IframeSidebar from './Data';
-import { isValidUrl } from './schema';
+import IframeView from './View';
 
 const messages = defineMessages({
   InputPlaceholder: {

@@ -1,11 +1,11 @@
-import React from 'react';
-import Icon from '@plone/volto/components/theme/Icon/Icon';
 import BlockDataForm from '@plone/volto/components/manage/Form/BlockDataForm';
-import { defineMessages } from 'react-intl';
-import { IframeBlockSchema } from './schema';
-
+import Icon from '@plone/volto/components/theme/Icon/Icon';
 import applicationSVG from '@plone/volto/icons/application.svg';
 import trashSVG from '@plone/volto/icons/delete.svg';
+import React from 'react';
+import { defineMessages } from 'react-intl';
+
+import { IframeBlockSchema } from './schema';
 
 const messages = defineMessages({
   Iframe: {

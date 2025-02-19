@@ -1,6 +1,5 @@
 import cx from 'classnames';
 import React from 'react';
-import { serializeNodes } from '@plone/volto-slate/editor/render';
 
 import { isValidUrl } from '@kitconcept/volto-iframe-block/helpers/isValidUrl';
 

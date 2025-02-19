@@ -1,7 +1,7 @@
 import cx from 'classnames';
 import React from 'react';
 
-import { isValidUrl } from '../helpers/isValidUrl';
+import { isValidUrl } from '@kitconcept/volto-iframe-block/helpers/isValidUrl';
 
 const IframeView = (props) => {
   const { className, data } = props;

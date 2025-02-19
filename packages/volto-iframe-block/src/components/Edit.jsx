@@ -8,9 +8,9 @@ import React, { useState } from 'react';
 import { defineMessages } from 'react-intl';
 import { toast } from 'react-toastify';
 
-import { isValidUrl } from '../helpers/isValidUrl';
-import IframeSidebar from './Data';
-import IframeView from './View';
+import { isValidUrl } from '@kitconcept/volto-iframe-block/helpers/isValidUrl';
+import IframeSidebar from '@kitconcept/volto-iframe-block/components/Data';
+import IframeView from '@kitconcept/volto-iframe-block/components/View';
 
 const messages = defineMessages({
   InputPlaceholder: {

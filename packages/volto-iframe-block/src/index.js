@@ -1,9 +1,9 @@
-import './theme/main.scss';
-
 import BlockSettingsSchema from '@plone/volto/components/manage/Blocks/Block/Schema';
 import applicationSVG from '@plone/volto/icons/application.svg';
-import IframeView from './components/View';
-import IframeEdit from './components/Edit';
+
+import IframeEdit from '@kitconcept/volto-iframe-block/components/Edit';
+import IframeView from '@kitconcept/volto-iframe-block/components/View';
+import '@kitconcept/volto-iframe-block/theme/main.scss';
 
 const applyConfig = (config) => {
   config.blocks.blocksConfig.iframe = {

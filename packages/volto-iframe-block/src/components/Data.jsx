@@ -5,7 +5,7 @@ import trashSVG from '@plone/volto/icons/delete.svg';
 import React from 'react';
 import { defineMessages } from 'react-intl';
 
-import { IframeBlockSchema } from './schema';
+import { IframeBlockSchema } from '@kitconcept/volto-iframe-block/components/schema';
 
 const messages = defineMessages({
   Iframe: {

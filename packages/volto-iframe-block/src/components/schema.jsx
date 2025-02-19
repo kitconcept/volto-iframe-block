@@ -87,7 +87,7 @@ export const IframeBlockSchema = (props) => ({
     },
     credit: {
       title: 'Credit',
-      widget: 'text',
+      widget: 'richtext',
     },
     width: {
       title: props.intl.formatMessage(messages.Width),

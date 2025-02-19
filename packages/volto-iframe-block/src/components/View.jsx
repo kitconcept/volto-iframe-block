@@ -1,5 +1,6 @@
 import cx from 'classnames';
 import React from 'react';
+import { serializeNodes } from '@plone/volto-slate/editor/render';
 
 import { isValidUrl } from '@kitconcept/volto-iframe-block/helpers/isValidUrl';
 
@@ -29,7 +30,12 @@ const IframeView = (props) => {
             {data.description && (
               <div className="description">{data.description}</div>
             )}
-            {data.credit && <div className="credit">Credit: {data.credit}</div>}
+            {data.credit && (
+              <div className="credit">
+                Credit:{' '}
+                <div dangerouslySetInnerHTML={{ __html: data.credit.data }} />
+              </div>
+            )}
           </figcaption>
         </figure>
       </div>

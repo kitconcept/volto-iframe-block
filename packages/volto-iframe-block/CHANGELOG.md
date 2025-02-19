@@ -8,6 +8,15 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0 (2025-02-19)
+
+### Breaking
+
+- Move isValidUrl to helper function so it can be shadowed. [@jnptk]
+  Add description and credit fields. [@jnptk]
+  Clear all fields including the input when the reset button is clicked. [@jnptk]
+  Show title, description, and credit in the View component. [@jnptk] [#7](https://github.com/kitconcept/volto-iframe-block/issue/7)
+
 ## 1.0.0 (2025-02-10)
 
 ### Internal

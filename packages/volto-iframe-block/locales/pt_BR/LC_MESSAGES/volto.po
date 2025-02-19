@@ -16,6 +16,16 @@ msgstr ""
 "Preferred-Encodings: utf-8\n"
 "Domain: volto\n"
 
+#. Default: "Credit"
+#: components/schema
+msgid "Credit"
+msgstr ""
+
+#. Default: "Description"
+#: components/schema
+msgid "Description"
+msgstr ""
+
 #. Default: "Error"
 #: components/Edit
 msgid "Error"

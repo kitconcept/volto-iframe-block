@@ -1,11 +1,11 @@
-import React from 'react';
-import Icon from '@plone/volto/components/theme/Icon/Icon';
 import BlockDataForm from '@plone/volto/components/manage/Form/BlockDataForm';
-import { defineMessages } from 'react-intl';
-import { IframeBlockSchema } from './schema';
-
+import Icon from '@plone/volto/components/theme/Icon/Icon';
 import applicationSVG from '@plone/volto/icons/application.svg';
 import trashSVG from '@plone/volto/icons/delete.svg';
+import React from 'react';
+import { defineMessages } from 'react-intl';
+
+import { IframeBlockSchema } from '@kitconcept/volto-iframe-block/components/schema';
 
 const messages = defineMessages({
   Iframe: {
@@ -19,16 +19,20 @@ const messages = defineMessages({
 });
 
 const IframeSidebar = (props) => {
-  const { intl, data, block, onChangeBlock } = props;
+  const { intl, data, block, onChangeBlock, resetSubmitUrl } = props;
   const schema = IframeBlockSchema({ ...props, intl });
 
   const resetBlock = () => {
     onChangeBlock(block, {
       ...data,
-      src: '',
-      title: '',
-      align: '',
+      src: undefined,
+      title: undefined,
+      description: undefined,
+      align: undefined,
+      height: undefined,
+      credit: undefined,
     });
+    resetSubmitUrl();
   };
 
   return (
@@ -52,7 +56,7 @@ const IframeSidebar = (props) => {
           formData={data}
           block={block}
           headerActions={
-            <button onClick={resetBlock}>
+            <button type="button" onClick={resetBlock}>
               <Icon name={trashSVG} size="24px" color="red" />
             </button>
           }

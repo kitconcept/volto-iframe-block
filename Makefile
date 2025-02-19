@@ -33,6 +33,11 @@ help: ## Show this help
 
 # Dev Helpers
 
+.PHONY: clean
+clean: ## Remove old artifacts
+	@echo "$(RED)==> Cleaning frontend environment and build$(RESET)"
+	rm -Rf core node_modules packages/volto-iframe-block/node_modules
+
 .PHONY: install
 install: ## Installs the add-on in a development environment
 	@echo "$(GREEN)Install$(RESET)"

@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { toast } from 'react-toastify';
-import Toast from '@plone/volto/components/manage/Toast/Toast';
-
-import { defineMessages } from 'react-intl';
-import Icon from '@plone/volto/components/theme/Icon/Icon';
 import SidebarPortal from '@plone/volto/components/manage/Sidebar/SidebarPortal';
-import clearSVG from '@plone/volto/icons/clear.svg';
+import Toast from '@plone/volto/components/manage/Toast/Toast';
+import Icon from '@plone/volto/components/theme/Icon/Icon';
 import aheadSVG from '@plone/volto/icons/ahead.svg';
 import applicationSVG from '@plone/volto/icons/application.svg';
-import IframeView from './View';
-import IframeSidebar from './Data';
-import { isValidUrl } from './schema';
+import clearSVG from '@plone/volto/icons/clear.svg';
+import React, { useState } from 'react';
+import { defineMessages } from 'react-intl';
+import { toast } from 'react-toastify';
+
+import { isValidUrl } from '@kitconcept/volto-iframe-block/helpers/isValidUrl';
+import IframeSidebar from '@kitconcept/volto-iframe-block/components/Data';
+import IframeView from '@kitconcept/volto-iframe-block/components/View';
 
 const messages = defineMessages({
   InputPlaceholder: {
@@ -84,6 +84,7 @@ const IframeEdit = (props) => {
                 {url && (
                   <div>
                     <button
+                      type="button"
                       className="cancel"
                       onClick={(e) => {
                         e.stopPropagation();
@@ -96,6 +97,7 @@ const IframeEdit = (props) => {
                 )}
                 <div>
                   <button
+                    type="button"
                     disabled={!url}
                     onClick={(e) => {
                       e.stopPropagation();
@@ -116,7 +118,7 @@ const IframeEdit = (props) => {
       )}
 
       <SidebarPortal selected={props.selected}>
-        <IframeSidebar {...props} />
+        <IframeSidebar {...props} resetSubmitUrl={resetSubmitUrl} />
       </SidebarPortal>
     </div>
   );

@@ -1,6 +1,4 @@
-import config from '@plone/volto/registry';
 import { defineMessages } from 'react-intl';
-import { isEmpty } from 'lodash';
 
 const messages = defineMessages({
   Iframe: {
@@ -14,6 +12,14 @@ const messages = defineMessages({
   Title: {
     id: 'Title',
     defaultMessage: 'Title',
+  },
+  Description: {
+    id: 'Description',
+    defaultMessage: 'Description',
+  },
+  Credit: {
+    id: 'Credit',
+    defaultMessage: 'Credit',
   },
   Width: {
     id: 'Width',
@@ -42,18 +48,6 @@ const messages = defineMessages({
   },
 });
 
-export function isValidUrl(url) {
-  const patterns = config.blocks.blocksConfig.iframe.validUrls;
-
-  if (isEmpty(patterns)) {
-    return true;
-  } else if (patterns.some((pattern) => pattern.includes(url))) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
 export const IframeBlockSchema = (props) => ({
   title: props.intl.formatMessage(messages.Iframe),
   block: 'Iframe',
@@ -61,7 +55,7 @@ export const IframeBlockSchema = (props) => ({
     {
       id: 'default',
       title: 'Default',
-      fields: ['src', 'title', 'width', 'height'],
+      fields: ['src', 'title', 'description', 'credit', 'width', 'height'],
     },
   ],
 
@@ -86,6 +80,14 @@ export const IframeBlockSchema = (props) => ({
           </a>{' '}
         </>
       ),
+    },
+    description: {
+      title: props.intl.formatMessage(messages.Description),
+      widget: 'textarea',
+    },
+    credit: {
+      title: 'Credit',
+      widget: 'richtext',
     },
     width: {
       title: props.intl.formatMessage(messages.Width),

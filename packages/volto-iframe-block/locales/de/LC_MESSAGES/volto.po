@@ -11,6 +11,16 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
+#. Default: "Credit"
+#: components/schema
+msgid "Credit"
+msgstr "Credit"
+
+#. Default: "Description"
+#: components/schema
+msgid "Description"
+msgstr "Beschreibung"
+
 #. Default: "Error"
 #: components/Edit
 msgid "Error"

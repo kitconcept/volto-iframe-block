@@ -8,7 +8,10 @@ import React, { useState } from 'react';
 import { defineMessages } from 'react-intl';
 import { toast } from 'react-toastify';
 
-import { isValidUrl } from '@kitconcept/volto-iframe-block/helpers/isValidUrl';
+import {
+  isValidUrl,
+  toastError,
+} from '@kitconcept/volto-iframe-block/helpers/isValidUrl';
 import IframeSidebar from '@kitconcept/volto-iframe-block/components/Data';
 import IframeView from '@kitconcept/volto-iframe-block/components/View';
 
@@ -16,10 +19,6 @@ const messages = defineMessages({
   InputPlaceholder: {
     id: 'Type a Iframe URL',
     defaultMessage: 'Type a Iframe URL',
-  },
-  IncorrectUrl: {
-    id: 'Invalid url',
-    defaultMessage: 'Invalid url',
   },
   Error: {
     id: 'Error',
@@ -51,8 +50,8 @@ const IframeEdit = (props) => {
     toast.error(
       <Toast
         error
-        title={intl.formatMessage(messages.Error)}
-        content={intl.formatMessage(messages.IncorrectUrl)}
+        title={intl.formatMessage(toastError.Title)}
+        content={intl.formatMessage(toastError.Content)}
       />,
     );
   };

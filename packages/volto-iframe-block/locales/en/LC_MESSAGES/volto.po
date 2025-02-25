@@ -23,6 +23,7 @@ msgstr ""
 
 #. Default: "Error"
 #: components/Edit
+#: helpers/isValidUrl
 msgid "Error"
 msgstr ""
 
@@ -38,7 +39,7 @@ msgid "Iframe"
 msgstr ""
 
 #. Default: "Invalid url"
-#: components/Edit
+#: helpers/isValidUrl
 msgid "Invalid url"
 msgstr ""
 
@@ -72,9 +73,9 @@ msgstr ""
 msgid "Type a Iframe URL"
 msgstr ""
 
-#. Default: "Values are in Pixels"
+#. Default: "Values are in Pixels (e.g. 100 or 100px) or Percent (e.g. 100%)"
 #: components/schema
-msgid "Values are in Pixels"
+msgid "Values are in Pixels (e.g. 100 or 100px) or Percent (e.g. 100%)"
 msgstr ""
 
 #. Default: "Width"

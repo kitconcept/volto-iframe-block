@@ -23,6 +23,7 @@ msgstr ""
 
 #. Default: "Error"
 #: components/Edit
+#: helpers/isValidUrl
 msgid "Error"
 msgstr ""
 
@@ -38,7 +39,7 @@ msgid "Iframe"
 msgstr ""
 
 #. Default: "Invalid url"
-#: components/Edit
+#: helpers/isValidUrl
 msgid "Invalid url"
 msgstr ""
 

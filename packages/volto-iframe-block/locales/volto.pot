@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2025-02-18T09:54:00.232Z\n"
+"POT-Creation-Date: 2025-02-25T09:33:36.629Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -25,6 +25,7 @@ msgstr ""
 
 #. Default: "Error"
 #: components/Edit
+#: helpers/isValidUrl
 msgid "Error"
 msgstr ""
 
@@ -40,7 +41,7 @@ msgid "Iframe"
 msgstr ""
 
 #. Default: "Invalid url"
-#: components/Edit
+#: helpers/isValidUrl
 msgid "Invalid url"
 msgstr ""
 

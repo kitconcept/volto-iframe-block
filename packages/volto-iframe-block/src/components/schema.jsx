@@ -97,7 +97,7 @@ export const IframeBlockSchema = (props) => ({
     },
     height: {
       title: props.intl.formatMessage(messages.Height),
-      type: 'number',
+      widget: 'text',
       description: props.intl.formatMessage(messages.TextHintPixels),
     },
   },

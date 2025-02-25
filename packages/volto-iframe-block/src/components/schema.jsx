@@ -43,8 +43,9 @@ const messages = defineMessages({
     defaultMessage: 'Open in a new tab',
   },
   TextHintPixels: {
-    id: 'Values are in Pixels',
-    defaultMessage: 'Values are in Pixels',
+    id: 'Values are in Pixels (e.g. 100 or 100px) or Percent (e.g. 100%)',
+    defaultMessage:
+      'Values are in Pixels (e.g. 100 or 100px) or Percent (e.g. 100%)',
   },
 });
 

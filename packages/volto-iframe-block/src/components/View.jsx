@@ -16,13 +16,8 @@ const IframeView = (props) => {
     <div className={cx('block iframe align', data.align, className)}>
       <div className="block-container">
         {data.src && isValidUrl(data.src) && (
-          <figure>
-            <iframe
-              src={data.src}
-              title={data.title}
-              width={width}
-              height={data.height}
-            />
+          <figure style={{ width: width }}>
+            <iframe src={data.src} title={data.title} height={data.height} />
             <figcaption>
               {data.title && <div className="title">{data.title}</div>}
               {data.description && (

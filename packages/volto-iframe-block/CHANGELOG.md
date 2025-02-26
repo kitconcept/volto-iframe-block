@@ -8,6 +8,22 @@
 
 <!-- towncrier release notes start -->
 
+## 2.1.0 (2025-02-26)
+
+### Feature
+
+- Move toast error messages to isValidUrl.js file so that if you want to shadow the `isValidUrl` function you can change the error message as well [@jnptk] [#8](https://github.com/kitconcept/volto-iframe-block/issue/8)
+- Changed the `height` field to use a `text` input field for pixel and percentage value support (e.g. 100px, 50%) [@jnptk] [#8](https://github.com/kitconcept/volto-iframe-block/issue/8)
+
+### Bugfix
+
+- We now only show the whole `figure` if a url is set & valid [@jnptk] [#8](https://github.com/kitconcept/volto-iframe-block/issue/8)
+- Moved the `width` to the `figure` element to ensure that title, description etc. are the same width as the `iframe` [@jnptk] [#8](https://github.com/kitconcept/volto-iframe-block/issue/8)
+
+### Internal
+
+- Add `backend-docker-detached-start` make command to start backend in daemon mode [@jnptk] [#8](https://github.com/kitconcept/volto-iframe-block/issue/8)
+
 ## 2.0.0 (2025-02-19)
 
 ### Breaking

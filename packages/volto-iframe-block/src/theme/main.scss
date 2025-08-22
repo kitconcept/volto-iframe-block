@@ -32,6 +32,12 @@
   }
 }
 
-.block.iframe iframe {
-  width: 100%;
+.block.iframe {
+  figure {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  iframe {
+    width: 100%;
+  }
 }

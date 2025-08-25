@@ -47,6 +47,14 @@ const messages = defineMessages({
     defaultMessage:
       'Values are in Pixels (e.g. 100 or 100px) or Percent (e.g. 100%)',
   },
+  PreserveAspectRatio: {
+    id: 'Preserve aspect ratio',
+    defaultMessage: 'Preserve aspect ratio',
+  },
+  PreserveAspectRatioHint: {
+    id: 'Preserve aspect ratio based on initial width and height',
+    defaultMessage: 'Preserve aspect ratio based on initial width and height',
+  },
 });
 
 export const IframeBlockSchema = (props) => ({
@@ -56,7 +64,15 @@ export const IframeBlockSchema = (props) => ({
     {
       id: 'default',
       title: 'Default',
-      fields: ['src', 'title', 'description', 'credit', 'width', 'height'],
+      fields: [
+        'src',
+        'title',
+        'description',
+        'credit',
+        'width',
+        'height',
+        'preserveAspectRatio',
+      ],
     },
   ],
 
@@ -100,6 +116,12 @@ export const IframeBlockSchema = (props) => ({
       title: props.intl.formatMessage(messages.Height),
       widget: 'text',
       description: props.intl.formatMessage(messages.TextHintPixels),
+    },
+    preserveAspectRatio: {
+      title: props.intl.formatMessage(messages.PreserveAspectRatio),
+      description: props.intl.formatMessage(messages.PreserveAspectRatioHint),
+      type: 'boolean',
+      default: false,
     },
   },
   required: [],

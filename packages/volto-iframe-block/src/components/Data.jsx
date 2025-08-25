@@ -31,6 +31,8 @@ const IframeSidebar = (props) => {
       align: undefined,
       height: undefined,
       credit: undefined,
+      preserveAspectRatio: undefined,
+      calculatedAspectRatio: undefined,
     });
     resetSubmitUrl();
   };

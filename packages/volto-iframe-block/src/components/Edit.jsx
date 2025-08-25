@@ -4,7 +4,7 @@ import Icon from '@plone/volto/components/theme/Icon/Icon';
 import aheadSVG from '@plone/volto/icons/ahead.svg';
 import applicationSVG from '@plone/volto/icons/application.svg';
 import clearSVG from '@plone/volto/icons/clear.svg';
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { defineMessages } from 'react-intl';
 import { toast } from 'react-toastify';
 
@@ -29,6 +29,8 @@ const messages = defineMessages({
 const IframeEdit = (props) => {
   const { data, intl } = props;
   const [url, setUrl] = useState('');
+  const iframeRef = useRef(null);
+  const [aspectRatio, setAspectRatio] = useState(null);
 
   const onChangeUrl = ({ target }) => {
     setUrl(target.value);
@@ -64,10 +66,40 @@ const IframeEdit = (props) => {
     }
   };
 
+  const calculateAspectRatio = (iframe) => {
+    const rect = iframe.getBoundingClientRect();
+    if (rect.width > 0 && rect.height > 0) {
+      const ratio = rect.width / rect.height;
+      setAspectRatio(ratio);
+    }
+  };
+
+  useEffect(() => {
+    if (iframeRef.current) {
+      calculateAspectRatio(iframeRef.current);
+    }
+  }, [data.preserveAspectRatio, data.src, data.height, data.width]);
+
+  useEffect(() => {
+    if (aspectRatio && data.preserveAspectRatio) {
+      props.onChangeBlock(props.block, {
+        ...props.data,
+        calculatedAspectRatio: aspectRatio,
+      });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [
+    aspectRatio,
+    data.preserveAspectRatio,
+    data.src,
+    data.height,
+    data.width,
+  ]);
+
   return (
     <div>
       {data.src ? (
-        <IframeView {...props} />
+        <IframeView isEditMode {...props} iframeRef={iframeRef} />
       ) : (
         <div>
           <center>

@@ -8,6 +8,13 @@
 
 <!-- towncrier release notes start -->
 
+## 2.1.2 (2025-08-25)
+
+### Bugfix
+
+- Center iframe in page layout. @danalvrz [#9](https://github.com/kitconcept/volto-iframe-block/issue/9)
+- Fix eslint import resolver. @danalvrz [#10](https://github.com/kitconcept/volto-iframe-block/issue/10)
+
 ## 2.1.0 (2025-02-26)
 
 ### Feature

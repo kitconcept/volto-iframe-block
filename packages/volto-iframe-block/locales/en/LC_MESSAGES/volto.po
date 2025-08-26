@@ -53,6 +53,16 @@ msgstr ""
 msgid "Open in a new tab"
 msgstr ""
 
+#. Default: "Preserve aspect ratio"
+#: components/schema
+msgid "Preserve aspect ratio"
+msgstr ""
+
+#. Default: "Preserve aspect ratio based on initial width and height"
+#: components/schema
+msgid "Preserve aspect ratio based on initial width and height"
+msgstr ""
+
 #. Default: "Provide an iFrame title for better accessibility for screenreaders (title will not be visible),"
 #: components/schema
 msgid "Provide an iFrame title for better accessibility for screenreaders (title will not be visible),"

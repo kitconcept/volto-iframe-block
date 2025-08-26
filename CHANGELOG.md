@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 2.2.0 (2025-08-26)
+
+### Feature
+
+- Add preserve aspect ratio option to improve responsiveness. @danalvrz [#11](https://github.com/kitconcept/volto-iframe-block/issue/11)
+
 ## 2.1.2 (2025-08-25)
 
 ### Bugfix

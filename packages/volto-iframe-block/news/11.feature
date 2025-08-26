@@ -1,1 +1,0 @@
-Add preserve aspect ratio option to improve responsiveness. @danalvrz

@@ -30,7 +30,6 @@ const IframeEdit = (props) => {
   const { data, intl } = props;
   const [url, setUrl] = useState('');
   const iframeRef = useRef(null);
-  const [aspectRatio, setAspectRatio] = useState(null);
 
   const onChangeUrl = ({ target }) => {
     setUrl(target.value);
@@ -68,9 +67,13 @@ const IframeEdit = (props) => {
 
   const calculateAspectRatio = (iframe) => {
     const rect = iframe.getBoundingClientRect();
-    if (rect.width > 0 && rect.height > 0) {
-      const ratio = rect.width / rect.height;
-      setAspectRatio(ratio);
+    let ratio = undefined;
+    if (rect.width > 0 && rect.height > 0 && data.preserveAspectRatio) {
+      ratio = rect.width / rect.height;
+      props.onChangeBlock(props.block, {
+        ...props.data,
+        calculatedAspectRatio: ratio,
+      });
     }
   };
 
@@ -78,23 +81,8 @@ const IframeEdit = (props) => {
     if (iframeRef.current) {
       calculateAspectRatio(iframeRef.current);
     }
-  }, [data.preserveAspectRatio, data.src, data.height, data.width]);
-
-  useEffect(() => {
-    if (aspectRatio && data.preserveAspectRatio) {
-      props.onChangeBlock(props.block, {
-        ...props.data,
-        calculatedAspectRatio: aspectRatio,
-      });
-    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [
-    aspectRatio,
-    data.preserveAspectRatio,
-    data.src,
-    data.height,
-    data.width,
-  ]);
+  }, [data.preserveAspectRatio, data.src, data.height, data.width]);
 
   return (
     <div>

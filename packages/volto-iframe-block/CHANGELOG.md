@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 2.3.0 (2025-09-18)
+
+### Feature
+
+- Make it possible for `isValidUrl` customizations to use data from `site` API endpoint. @danalvrz 
+
 ## 2.2.0 (2025-08-26)
 
 ### Feature

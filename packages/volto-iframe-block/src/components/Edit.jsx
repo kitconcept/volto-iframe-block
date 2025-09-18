@@ -7,6 +7,7 @@ import clearSVG from '@plone/volto/icons/clear.svg';
 import React, { useState, useEffect, useRef } from 'react';
 import { defineMessages } from 'react-intl';
 import { toast } from 'react-toastify';
+import { useSelector } from 'react-redux';
 
 import {
   isValidUrl,
@@ -30,6 +31,7 @@ const IframeEdit = (props) => {
   const { data, intl } = props;
   const [url, setUrl] = useState('');
   const iframeRef = useRef(null);
+  const siteData = useSelector((state) => state.site?.data);
 
   const onChangeUrl = ({ target }) => {
     setUrl(target.value);
@@ -40,7 +42,7 @@ const IframeEdit = (props) => {
   };
 
   const onSubmitUrl = () => {
-    if (isValidUrl(url)) {
+    if (isValidUrl(url, siteData)) {
       props.onChangeBlock(props.block, {
         ...props.data,
         src: url,

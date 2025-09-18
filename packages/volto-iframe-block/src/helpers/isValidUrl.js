@@ -17,7 +17,7 @@ export const toastError = defineMessages({
   },
 });
 
-export function isValidUrl(url) {
+export function isValidUrl(url, siteData) {
   const patterns = config.blocks.blocksConfig.iframe.validUrls;
 
   if (isEmpty(patterns)) {

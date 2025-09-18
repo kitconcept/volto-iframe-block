@@ -1,0 +1,1 @@
+Make it possible for `isValidUrl` customizations to use data from `site` API endpoint. @danalvrz

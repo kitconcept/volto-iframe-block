@@ -39,6 +39,7 @@ msgid "Iframe"
 msgstr "Iframe"
 
 #. Default: "Invalid url"
+#: components/View
 #: helpers/isValidUrl
 msgid "Invalid url"
 msgstr "Ungültige Url"

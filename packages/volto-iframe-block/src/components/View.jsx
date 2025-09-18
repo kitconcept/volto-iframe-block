@@ -51,7 +51,11 @@ const IframeView = (props) => {
             </figcaption>
           </figure>
         ) : (
-          isEditMode && <div className="invalid-url message"><FormattedMessage id="Invalid URL" defaultMessage="Invalid URL" /></div>
+          isEditMode && (
+            <div className="invalid-url message">
+              <FormattedMessage id="Invalid url" defaultMessage="Invalid url" />
+            </div>
+          )
         )}
       </div>
     </div>

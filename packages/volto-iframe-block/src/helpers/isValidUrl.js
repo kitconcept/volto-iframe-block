@@ -22,7 +22,7 @@ export function isValidUrl(url, siteData) {
 
   if (isEmpty(patterns)) {
     return true;
-  } else if (patterns.some((pattern) => pattern.includes(props.url))) {
+  } else if (patterns.some((pattern) => pattern.includes(url))) {
     return true;
   } else {
     return false;

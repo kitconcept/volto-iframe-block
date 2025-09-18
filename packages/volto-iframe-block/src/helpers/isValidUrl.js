@@ -17,12 +17,12 @@ export const toastError = defineMessages({
   },
 });
 
-export function isValidUrl(url) {
+export function isValidUrl(props) {
   const patterns = config.blocks.blocksConfig.iframe.validUrls;
 
   if (isEmpty(patterns)) {
     return true;
-  } else if (patterns.some((pattern) => pattern.includes(url))) {
+  } else if (patterns.some((pattern) => pattern.includes(props.url))) {
     return true;
   } else {
     return false;

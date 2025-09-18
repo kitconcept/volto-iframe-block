@@ -31,7 +31,7 @@ const IframeEdit = (props) => {
   const { data, intl } = props;
   const [url, setUrl] = useState('');
   const iframeRef = useRef(null);
-  const siteData = useSelector((state) => state.site.data);
+  const siteData = useSelector((state) => state.site?.data);
 
   const onChangeUrl = ({ target }) => {
     setUrl(target.value);

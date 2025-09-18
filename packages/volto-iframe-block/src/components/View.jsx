@@ -53,7 +53,10 @@ const IframeView = (props) => {
         ) : (
           isEditMode && (
             <div className="invalid-url message">
-              <FormattedMessage id="Invalid url" defaultMessage="Invalid url" />
+              <FormattedMessage
+                id="Invalid url"
+                defaultMessage="This URL is not allowed."
+              />
             </div>
           )
         )}

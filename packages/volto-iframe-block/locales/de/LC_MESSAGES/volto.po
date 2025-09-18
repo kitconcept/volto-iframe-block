@@ -38,7 +38,7 @@ msgstr "Höhe"
 msgid "Iframe"
 msgstr "Iframe"
 
-#. Default: "Invalid url"
+#. Default: "This URL is not allowed."
 #: components/View
 #: helpers/isValidUrl
 msgid "Invalid url"

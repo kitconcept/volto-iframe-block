@@ -1,10 +1,13 @@
 import cx from 'classnames';
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { FormattedMessage } from 'react-intl';
 
 import { isValidUrl } from '@kitconcept/volto-iframe-block/helpers/isValidUrl';
 
 const IframeView = (props) => {
   const { className, data, iframeRef, isEditMode } = props;
+  const siteData = useSelector((state) => state.site?.data);
   const width =
     data.width === 'center'
       ? '620px'
@@ -15,7 +18,7 @@ const IframeView = (props) => {
   return (
     <div className={cx('block iframe align', data.align, className)}>
       <div className="block-container">
-        {data.src && isValidUrl(data.src) && (
+        {data.src && isValidUrl(data.src, siteData) ? (
           <figure style={{ width: width, maxWidth: '100%' }}>
             <iframe
               ref={iframeRef}
@@ -47,6 +50,15 @@ const IframeView = (props) => {
               )}
             </figcaption>
           </figure>
+        ) : (
+          isEditMode && (
+            <div className="invalid-url message">
+              <FormattedMessage
+                id="Invalid url"
+                defaultMessage="This URL is not allowed."
+              />
+            </div>
+          )
         )}
       </div>
     </div>

@@ -13,7 +13,7 @@ export const toastError = defineMessages({
   },
   Content: {
     id: 'Invalid url',
-    defaultMessage: 'Invalid url',
+    defaultMessage: 'This URL is not allowed.',
   },
 });
 

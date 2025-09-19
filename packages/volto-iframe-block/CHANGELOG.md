@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 2.3.1 (2025-09-18)
+
+### Bugfix
+
+- Fix check for invalid URLs in the View component, and show a warning in edit mode. @danalvrz 
+
 ## 2.3.0 (2025-09-18)
 
 ### Feature

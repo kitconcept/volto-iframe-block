@@ -13,6 +13,7 @@ msgstr ""
 
 #. Default: "Credit"
 #: components/schema
+#: components/View
 msgid "Credit"
 msgstr "Credit"
 

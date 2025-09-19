@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 2.3.2 (2025-09-19)
+
+### Bugfix
+
+- Minor style and messages fixes for Iframe figcaption. @danalvrz 
+
 ## 2.3.1 (2025-09-18)
 
 ### Bugfix

@@ -32,18 +32,30 @@
   }
 
   .invalid-url {
-  padding: 1.5em;
-  background: #f9edbe;
-  text-align: center;
+    padding: 1.5em;
+    background: #f9edbe;
+    text-align: center;
   }
-
-
 }
 
 .block.iframe {
   figure {
     margin-right: auto;
     margin-left: auto;
+
+    figcaption {
+      .credit {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        & > div {
+          margin-left: 4px;
+          * {
+            font-size: inherit;
+          }
+        }
+      }
+    }
   }
   iframe {
     width: 100%;

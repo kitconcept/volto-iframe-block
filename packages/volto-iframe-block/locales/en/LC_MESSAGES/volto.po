@@ -13,6 +13,7 @@ msgstr ""
 
 #. Default: "Credit"
 #: components/schema
+#: components/View
 msgid "Credit"
 msgstr ""
 
@@ -64,9 +65,9 @@ msgstr ""
 msgid "Preserve aspect ratio based on initial width and height"
 msgstr ""
 
-#. Default: "Provide an iFrame title for better accessibility for screenreaders (title will not be visible),"
+#. Default: "Provide an iFrame title for better accessibility,"
 #: components/schema
-msgid "Provide an iFrame title for better accessibility for screenreaders (title will not be visible),"
+msgid "Provide an iFrame title for better accessibility,"
 msgstr ""
 
 #. Default: "Source"

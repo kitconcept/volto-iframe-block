@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2025-09-18T22:04:20.013Z\n"
+"POT-Creation-Date: 2025-09-19T18:51:21.348Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -15,6 +15,7 @@ msgstr ""
 
 #. Default: "Credit"
 #: components/schema
+#: components/View
 msgid "Credit"
 msgstr ""
 
@@ -66,9 +67,9 @@ msgstr ""
 msgid "Preserve aspect ratio based on initial width and height"
 msgstr ""
 
-#. Default: "Provide an iFrame title for better accessibility for screenreaders (title will not be visible),"
+#. Default: "Provide an iFrame title for better accessibility,"
 #: components/schema
-msgid "Provide an iFrame title for better accessibility for screenreaders (title will not be visible),"
+msgid "Provide an iFrame title for better accessibility,"
 msgstr ""
 
 #. Default: "Source"

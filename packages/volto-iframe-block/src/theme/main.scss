@@ -42,6 +42,20 @@
   figure {
     margin-right: auto;
     margin-left: auto;
+
+    figcaption {
+      .credit {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        & > div {
+          margin-left: 4px;
+          * {
+            font-size: inherit;
+          }
+        }
+      }
+    }
   }
   iframe {
     width: 100%;

@@ -30,9 +30,8 @@ const messages = defineMessages({
     defaultMessage: 'Height',
   },
   TitleTextHint: {
-    id: 'Provide an iFrame title for better accessibility for screenreaders (title will not be visible),',
-    defaultMessage:
-      'Provide an iFrame title for better accessibility for screenreaders (title will not be visible),',
+    id: 'Provide an iFrame title for better accessibility,',
+    defaultMessage: 'Provide an iFrame title for better accessibility,',
   },
   TitleLinkTextHint: {
     id: 'see WCAG 2.1',

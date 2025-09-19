@@ -13,6 +13,7 @@ msgstr ""
 
 #. Default: "Credit"
 #: components/schema
+#: components/View
 msgid "Credit"
 msgstr "Credit"
 
@@ -64,10 +65,10 @@ msgstr "Seitenverhältnis beibehalten"
 msgid "Preserve aspect ratio based on initial width and height"
 msgstr "Seitenverhältnis basierend auf der ursprünglichen Breite und Höhe beibehalten"
 
-#. Default: "Provide an iFrame title for better accessibility for screenreaders (title will not be visible),"
+#. Default: "Provide an iFrame title for better accessibility,"
 #: components/schema
-msgid "Provide an iFrame title for better accessibility for screenreaders (title will not be visible),"
-msgstr "Geben Sie einen iFrame-Titel an, um die Zugänglichkeit für Screenreader zu verbessern (der Titel wird nicht angezeigt),"
+msgid "Provide an iFrame title for better accessibility,"
+msgstr "Geben Sie einen iFrame-Titel an, um die Barrierefreiheit zu verbessern,"
 
 #. Default: "Source"
 #: components/schema
@@ -87,12 +88,12 @@ msgstr "Geben Sie eine URL ein"
 #. Default: "Values are in Pixels (e.g. 100 or 100px) or Percent (e.g. 100%)"
 #: components/schema
 msgid "Values are in Pixels (e.g. 100 or 100px) or Percent (e.g. 100%)"
-msgstr "Die Werte werden in Pixeln (z.B. 100 oder 100px) oder Prozent (z.B. 100%) angegeben."
+msgstr "Werte können in Pixeln (z.B. "100" oder "100px") oder in Prozent (z.B. "100%") angegeben werden."
 
 #. Default: "Width"
 #: components/schema
 msgid "Width"
-msgstr "Weite"
+msgstr "Breite"
 
 #. Default: "see WCAG 2.1"
 #: components/schema

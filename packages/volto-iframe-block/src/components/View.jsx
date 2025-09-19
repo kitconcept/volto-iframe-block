@@ -44,7 +44,7 @@ const IframeView = (props) => {
               )}
               {data.credit && (
                 <div className="credit">
-                  Credit:{' '}
+                  <FormattedMessage id="Credit" defaultMessage="Credit" />:
                   <div dangerouslySetInnerHTML={{ __html: data.credit.data }} />
                 </div>
               )}

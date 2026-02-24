@@ -1,3 +1,5 @@
+#. Translation of volto.pot to Portuguese
+#. Matheus N.S. <matheusnsantana@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
@@ -20,87 +22,87 @@ msgstr ""
 #: components/schema
 #: components/View
 msgid "Credit"
-msgstr ""
+msgstr "Crédito"
 
 #. Default: "Description"
 #: components/schema
 msgid "Description"
-msgstr ""
+msgstr "Descrição"
 
 #. Default: "Error"
 #: components/Edit
 #: helpers/isValidUrl
 msgid "Error"
-msgstr ""
+msgstr "Erro"
 
 #. Default: "Height"
 #: components/schema
 msgid "Height"
-msgstr ""
+msgstr "Altura"
 
 #. Default: "Iframe"
 #: components/Data
 #: components/schema
 msgid "Iframe"
-msgstr ""
+msgstr "Iframe"
 
 #. Default: "This URL is not allowed."
 #: components/View
 #: helpers/isValidUrl
 msgid "Invalid url"
-msgstr ""
+msgstr "URL inválida"
 
 #. Default: "No Iframe source selected"
 #: components/Data
 msgid "No Iframe source selected"
-msgstr ""
+msgstr "Nenhuma fonte de Iframe selecionada"
 
 #. Default: "Open in a new tab"
 #: components/schema
 msgid "Open in a new tab"
-msgstr ""
+msgstr "Abrir em nova aba"
 
 #. Default: "Preserve aspect ratio"
 #: components/schema
 msgid "Preserve aspect ratio"
-msgstr ""
+msgstr "Preservar proporção"
 
 #. Default: "Preserve aspect ratio based on initial width and height"
 #: components/schema
 msgid "Preserve aspect ratio based on initial width and height"
-msgstr ""
+msgstr "Preservar proporção com base na largura e altura iniciais"
 
 #. Default: "Provide an iFrame title for better accessibility,"
 #: components/schema
 msgid "Provide an iFrame title for better accessibility,"
-msgstr ""
+msgstr "Forneça um título para o iFrame para melhor acessibilidade,"
 
 #. Default: "Source"
 #: components/schema
 msgid "Source"
-msgstr ""
+msgstr "Fonte"
 
 #. Default: "Title"
 #: components/schema
 msgid "Title"
-msgstr ""
+msgstr "Título"
 
 #. Default: "Type a Iframe URL"
 #: components/Edit
 msgid "Type a Iframe URL"
-msgstr ""
+msgstr "Digite uma URL de Iframe"
 
 #. Default: "Values are in Pixels (e.g. 100 or 100px) or Percent (e.g. 100%)"
 #: components/schema
 msgid "Values are in Pixels (e.g. 100 or 100px) or Percent (e.g. 100%)"
-msgstr ""
+msgstr "Valores em Pixels (ex: 100 ou 100px) ou Porcentagem (ex: 100%)"
 
 #. Default: "Width"
 #: components/schema
 msgid "Width"
-msgstr ""
+msgstr "Largura"
 
 #. Default: "see WCAG 2.1"
 #: components/schema
 msgid "see WCAG 2.1"
-msgstr ""
+msgstr "ver WCAG 2.1"

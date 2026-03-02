@@ -8,6 +8,13 @@
 
 <!-- towncrier release notes start -->
 
+## 2.4.0 (2026-03-02)
+
+### Internal
+
+- Updated README + added Screenshot (gif) and Screencast. @humanaice [#6](https://github.com/kitconcept/volto-iframe-block/issue/6)
+- Updated pt-br translations. @humanaice [#15](https://github.com/kitconcept/volto-iframe-block/issue/15)
+
 ## 2.3.2 (2025-09-19)
 
 ### Bugfix

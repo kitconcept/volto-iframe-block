@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 2.4.1 (2026-06-11)
+
+### Bugfix
+
+- Fix changing the width of the iframe blocks shifts the page layout @iRohitSingh [#18](https://github.com/kitconcept/volto-iframe-block/issue/18)
+
 ## 2.4.0 (2026-03-02)
 
 ### Internal

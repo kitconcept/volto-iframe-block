@@ -94,6 +94,10 @@ release-dry-run: ## Dry-run the release of the add-on on npmjs.org
 test: ## Run unit tests
 	pnpm test
 
+.PHONY: test-addon
+test-addon: ## Run the add-on unit tests (Vitest)
+	pnpm test:addon
+
 .PHONY: test-ci
 ci-test: ## Run unit tests in CI
 	# Unit Tests need the i18n to be built

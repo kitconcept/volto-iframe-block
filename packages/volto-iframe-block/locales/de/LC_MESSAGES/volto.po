@@ -50,11 +50,6 @@ msgstr "Ungültige Url"
 msgid "No Iframe source selected"
 msgstr "Keine Iframe-Quelle angegeben"
 
-#. Default: "Open in a new tab"
-#: components/schema
-msgid "Open in a new tab"
-msgstr "In neuem Tab öffnen"
-
 #. Default: "Preserve aspect ratio"
 #: components/schema
 msgid "Preserve aspect ratio"

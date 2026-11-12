@@ -3,6 +3,7 @@ import applicationSVG from '@plone/volto/icons/application.svg';
 
 import IframeEdit from '@kitconcept/volto-iframe-block/components/Edit';
 import IframeView from '@kitconcept/volto-iframe-block/components/View';
+import { IframeBlockSchema } from '@kitconcept/volto-iframe-block/components/schema';
 import '@kitconcept/volto-iframe-block/theme/main.scss';
 
 const applyConfig = (config) => {
@@ -14,6 +15,7 @@ const applyConfig = (config) => {
     view: IframeView,
     edit: IframeEdit,
     schema: BlockSettingsSchema,
+    blockSchema: IframeBlockSchema,
     restricted: false,
     mostUsed: false,
     sidebarTab: 1,

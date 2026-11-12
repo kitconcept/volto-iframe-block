@@ -1,5 +1,3 @@
-#. Translation of volto.pot to Portuguese
-#. Matheus N.S. <matheusnsantana@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
@@ -56,11 +54,6 @@ msgstr "URL inválida"
 #: components/Data
 msgid "No Iframe source selected"
 msgstr "Nenhuma fonte de Iframe selecionada"
-
-#. Default: "Open in a new tab"
-#: components/schema
-msgid "Open in a new tab"
-msgstr "Abrir em nova aba"
 
 #. Default: "Preserve aspect ratio"
 #: components/schema

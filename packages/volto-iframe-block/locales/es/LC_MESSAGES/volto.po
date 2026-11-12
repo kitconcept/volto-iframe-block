@@ -57,11 +57,6 @@ msgstr ""
 msgid "No Iframe source selected"
 msgstr ""
 
-#. Default: "Open in a new tab"
-#: components/schema
-msgid "Open in a new tab"
-msgstr ""
-
 #. Default: "Preserve aspect ratio"
 #: components/schema
 msgid "Preserve aspect ratio"

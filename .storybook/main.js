@@ -4,9 +4,15 @@ const path = require('path');
 
 const projectRootPath = path.resolve('.');
 const lessPlugin = require('@plone/volto/webpack-plugins/webpack-less-plugin');
-const scssPlugin = require('razzle-plugin-scss');
+const scssPlugin = require('@plone/volto/webpack-plugins/webpack-scss-plugin');
 
-const createConfig = require('razzle/config/createConfigAsync.js');
+// Razzle is provided by Volto's own @plone/razzle, not by this checkout.
+const createConfig = require(
+  path.join(
+    __dirname,
+    '../core/packages/volto/node_modules/@plone/razzle/config/createConfigAsync.js',
+  ),
+);
 const razzleConfig = require(path.join(projectRootPath, 'razzle.config.js'));
 
 const SVGLOADER = {

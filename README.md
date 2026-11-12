@@ -98,6 +98,10 @@ Visit http://localhost:3000/ in a browser, login, and check the awesome new feat
 config.blocks.blocksConfig.iframe.validUrls = [''];
 ```
 
+## Block schema and documentation
+
+The block publishes its schema and its documentation (`docs.block.md`) through the `@blocks-schema` endpoint of the Volto server. Support for this endpoint needs Volto 19.6 or later; older versions ignore the file.
+
 ## Development
 
 The development of this add-on is done in isolation using a new approach using pnpm workspaces and latest `mrs-developer` and other Volto core improvements.

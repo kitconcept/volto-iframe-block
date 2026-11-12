@@ -37,10 +37,6 @@ const messages = defineMessages({
     id: 'see WCAG 2.1',
     defaultMessage: 'see WCAG 2.1',
   },
-  openLinkInNewTab: {
-    id: 'Open in a new tab',
-    defaultMessage: 'Open in a new tab',
-  },
   TextHintPixels: {
     id: 'Values are in Pixels (e.g. 100 or 100px) or Percent (e.g. 100%)',
     defaultMessage:
@@ -83,19 +79,9 @@ export const IframeBlockSchema = (props) => ({
     title: {
       title: props.intl.formatMessage(messages.Title),
       widget: 'text',
-      description: (
-        <>
-          {props.intl.formatMessage(messages.TitleTextHint)}{' '}
-          <a
-            href="https://www.w3.org/WAI/WCAG21/Techniques/html/H64"
-            title={props.intl.formatMessage(messages.openLinkInNewTab)}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {props.intl.formatMessage(messages.TitleLinkTextHint)}
-          </a>{' '}
-        </>
-      ),
+      // A plain string, not JSX: the @blocks-schema endpoint serializes the
+      // schema to JSON, and React elements are dropped from it.
+      description: `${props.intl.formatMessage(messages.TitleTextHint)} ${props.intl.formatMessage(messages.TitleLinkTextHint)}`,
     },
     description: {
       title: props.intl.formatMessage(messages.Description),

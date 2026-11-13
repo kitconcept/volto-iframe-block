@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 2.5.0 (2026-11-12)
+
+### Feature
+
+- Added support for the `@blocks-schema` endpoint of Volto 19.6: the iframe block publishes its schema and its documentation, which describes the stored data with a complete example. The title hint in the schema is now plain text, so it is served in the schema too. @ericof [#19](https://github.com/kitconcept/volto-iframe-block/issue/19)
+
 ## 2.4.1 (2026-06-11)
 
 ### Bugfix
